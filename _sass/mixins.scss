@@ -1,0 +1,16 @@
+@mixin abspad($amount) {
+    top: #{$amount};
+    left: #{$amount};
+    right: #{$amount};
+    bottom: #{$amount};
+}
+
+@mixin partsgridcollums($width) {
+    @for $i from 2 through 10 {
+        @media screen and (min-width: #{$i * $width}) {
+            .parts-grid .part-item {
+                width: 100% / $i;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+<svg width="80" height="88" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <defs>
+  <filter id="svg_1_blur">
+   <feGaussianBlur stdDeviation="0.1"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_4_blur">
+   <feGaussianBlur stdDeviation="0" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path filter="url(#svg_4_blur)" fill="#ffffff" stroke-width="2" d="m39.1823,86.44665l8.58305,-9.56141c0.07874,0.08772 -16.92986,0.08772 -16.92986,0.08772c0,0 8.34681,9.47369 8.34681,9.47369z" id="svg_4" stroke="#046207"/>
+  <rect rx="2" fill="#ffffff" stroke-width="2" x="1.672131" y="1.672132" width="76.363636" height="76" id="svg_1" filter="url(#svg_1_blur)" stroke="#046207"/>
+  <text fill="#046207" stroke-width="0" stroke-opacity="null" x="8.761116" y="71.149744" id="svg_5" font-size="89" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" stroke="#000">D</text>
+ </g>
+</svg>

@@ -1,0 +1,39 @@
+---
+title: JSON-GUI
+timezone: Europe/Amsterdam
+collections:
+  client_collection:
+    title: Pagina's inhoud
+    output: false
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+  parts_min:
+    title: Parts
+    output: true
+volledige-titel: JSON Gui
+tags: JSON GUI interface
+# phone: 06-12345678
+# email: effie@testmail.com
+description: A JSON GUI
+baseurl: 
+url: 
+github_username: bunkersem
+youtube_username: 9Wereld
+markdown: kramdown
+theme: minima
+plugins: 
+  - jekyll-seo-tag
+author:
+  name: Sem Postma
+  from: Oosterhout, Noord Brabant, The Netherlands
+  role: Developer
+  email: sem.postma@gmail.com
+designer:
+  name: Sem Postma
+  from: Oosterhout, Noord Brabant, The Netherlands
+  role: Designer
+  email: sem.postma@gmail.com

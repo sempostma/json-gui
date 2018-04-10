@@ -1,0 +1,111 @@
+/* RGB */
+$col-default: rgba(53, 53, 49, 1);
+$col-danger: rgba(236, 78, 32, 1);
+$col-warning: rgba(255, 149, 5, 1);
+$col-primary: rgba(1, 111, 185, 1);
+$col-dark: #222;
+$col-info: rgba(71, 0, 36, 1);
+$col-secondary: rgba(110, 144, 117, 1);
+
+$col-background: rgba(255, 255, 255, 1);
+$col-white: rgba(250, 250, 250, 1);
+
+
+.primary {
+    color: $col-primary!important;
+    border-color: $col-primary!important;
+}
+
+.primary::before, .primary::after {
+    color: $col-primary!important;
+    border-color: $col-primary!important;
+    background: $col-primary!important;
+}
+
+.default {
+    color: $col-default!important;
+    border-color: $col-default!important;
+}
+
+.default::before, .default::after {
+    color: $col-default!important;
+    border-color: $col-default!important;
+    background: $col-default!important;
+}
+
+.danger {
+    color: $col-danger!important;
+    border-color: $col-danger!important;
+}
+
+.danger::before, .danger::after {
+    color: $col-danger!important;
+    border-color: $col-danger!important;
+    background: $col-danger!important;
+}
+
+.warning {
+    color: $col-warning!important;
+    border-color: $col-warning!important;
+}
+
+.warning::before, .warning::after {
+    color: $col-warning!important;
+    border-color: $col-warning!important;
+    background: $col-warning!important;
+}
+
+.dark {
+    color: $col-dark!important;
+    border-color: $col-dark!important;
+}
+
+.dark::before, .dark::after {
+    color: $col-dark!important;
+    border-color: $col-dark!important;
+    background: $col-dark!important;
+}
+
+.info {
+    color: $col-info!important;
+    border-color: $col-info!important;
+}
+
+.info::before, .info::after {
+    color: $col-info!important;
+    border-color: $col-info!important;
+    background: $col-info!important;
+}
+
+.secondary {
+    color: $col-secondary!important;
+    border-color: $col-secondary!important;
+}
+
+.secondary::before, .secondary::after {
+    color: $col-secondary!important;
+    border-color: $col-secondary!important;
+    background: $col-secondary!important;
+}
+
+.secondary {
+    color: $col-secondary!important;
+    border-color: $col-secondary!important;
+}
+
+.secondary::before, .secondary::after {
+    color: $col-secondary!important;
+    border-color: $col-secondary!important;
+    background: $col-secondary!important;
+}
+
+.white {
+    color: $col-white!important;
+    border-color: $col-white!important;
+}
+
+.white::before, .white::after {
+    color: $col-white!important;
+    border-color: $col-white!important;
+    background: $col-white!important;
+}

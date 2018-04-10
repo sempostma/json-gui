@@ -1,0 +1,8 @@
+
+
+{% capture my_include %}
+{% include include.file %}
+{% endcapture %}
+{% assign parts =  my_include | markdownify | split: ' ' %}
+
+{{ parts }}

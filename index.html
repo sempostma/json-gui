@@ -1,0 +1,60 @@
+--- 
+title: Home 
+layout: home 
+---
+
+<div class="container-fluid mt-2">
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Visual editor</h3>
+                    <div class="button-type">
+                    </div>
+                </div>
+                <div id="tree" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <div id="root-node" class="node branch root">
+                        <span class="head">
+                            <span id="root-node-title" class="title">root</span>
+                            <span id="root-node-create" class="create fa fa-plus"></span>
+                        </span>
+                        <ul id="root-ul"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Code editor</h3>
+                    <div class="button-type">
+                        <button id="json-editor-copy" class="btn btn-info" title="Copy to clipboard">Copy</button>
+                    </div>
+                </div>
+                <div id="json"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="json-patch-container" class="container-fluid" style="display: none;">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-success" style="margin-top: 15px;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Output</h3>
+                    <div class="button-type">
+                        <button class="btn btn-primary" id="json-patch-copy" title="Copy to clipboard">Copy</button>
+                        <button class="btn btn-info" id="json-patch-close" title="Close">Close</button>
+                        <button class="btn btn-info" id="json-patch-save-disk" title="Close">Save on disk</button>
+                        <button class="btn btn-info" id="json-patch-save-online" title="Close">Save online</button>
+                    </div>
+                </div>
+                <pre style="margin-top: 0; height: calc(100vh - 144px);"><code id="json-patch-output">[]</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="msg-delta">
+    
+</div>

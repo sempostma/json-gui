@@ -1,0 +1,56 @@
+root:
+  - page: JSON Patch
+    subfolderitems:
+      - page: Reset History
+        id: nav-reset-history
+      - page: Generate Patch
+        id: nav-generate-patch
+      - seperator
+      - page: RFC6902 (external)
+        external: true
+        url: https://tools.ietf.org/html/rfc6902
+  - page: Schema
+    id: nav-generate-schema
+    subfolderitems:
+      - page: JSON Schema
+        id: nav-generate-schema-json
+      - page: Generic Schema
+        id: nav-generate-schema-generic
+      - page: MySql Table Schema
+        id: nav-generate-schema-mysql
+      - page: Mongoose Schema
+        id: nav-generate-schema-mongoose
+      - page: Google BigQuery
+        id: nav-generate-schema-bigquery
+      - page: ClickHouse Table Schema
+        id: nav-generate-schema-clickhouse
+  - page: File
+    id: nav-file
+    subfolderitems:
+      - page: New
+        id: nav-file-new
+      - page: Open from disk
+        id: nav-file-open-disk
+      - page: Open online
+        id: nav-file-open-online
+      - page: Import from XML
+        id: nav-file-import-xml
+      - page: Import from YAML
+        id: nav-file-import-yaml
+      - page: Import from CSV
+        id: nav-file-import-csv
+      - seperator
+      - page: Save on disk
+        id: nav-file-save-disk
+      - page: Save online
+        id: nav-file-save-online
+      - seperator
+      - page: Convert to XML
+        id: nav-file-convert-xml
+      - page: Convert to YAML
+        id: nav-file-convert-yaml
+      - page: Convert to CSV
+        id: nav-file-convert-csv
+  - page: Contact (external)
+    external: true
+    url: https://bunkersem.github.io/portfolio/contact

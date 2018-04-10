@@ -1,0 +1,10 @@
+
+{% capture collection_content %}
+{{ site.client_collection | where: "path", include.file }}
+{% endcapture %}
+{% assign res_str = 'src="' | append: site.url | append: site.baseurl | append: '/' %}
+{% assign collection_content = collection_content | replace: 'src="/', res_str %}
+{% if include.one_line  %}{{ collection_content | newline_to_br }}{% else %}
+{{ collection_content }}
+{% endif %}
+

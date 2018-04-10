@@ -1,0 +1,93 @@
+.cs-btn {
+    appearance: none;
+    position: relative;
+    user-select: none;
+    display: inline;
+    border-style: solid;
+    border-width: 2px;
+    border-color: $col-primary;
+    padding: 18px 46px;
+    background: none;
+    z-index: 0;
+    font-family: 'Raleway', sans-serif, Verdana, Geneva, Tahoma;
+    color: $col-primary;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0ms 30ms linear;
+    overflow: hidden;
+    border-spacing: 1;
+    line-height: 1.42rem;
+    outline: none;
+}
+.cs-btn::before {
+    
+    z-index: -1;
+    content: " ";
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 -2px -2px -2px;
+    position: absolute;
+    transition: top 100ms ease-out;
+    background: $col-primary;
+    outline: none;
+
+}
+
+
+
+
+.cs-btn:active, .cs-btn:hover, .cs-btn.active {
+    color: $col-white!important;
+    outline: none;
+}
+.cs-btn:active::before, .cs-btn:hover::before, .cs-btn.active::before {
+    top: 0;
+}
+
+.cs-btn.white:active, .cs-btn.white:hover, .cs-btn.white.active {
+    color: #474c55!important; // Using important is important.
+}
+
+// Fix issue that occurs when the button is pressed off but it still shows active because the users is still hovering
+.cs-btn:focus:hover:not(.active) {
+    color: $col-primary!important; // Using important is important.;
+}
+.cs-btn.secondary:hover:focus:not(.active) {
+    color: $col-secondary!important; // Using important is important.;
+}
+.cs-btn.dark:focus:hover:not(.active) {
+    color: $col-dark!important; // Using important is important.;
+}
+.cs-btn.danger:focus:hover:not(.active) {
+    color: $col-danger!important; // Using important is important.;
+}
+.cs-btn.default:focus:hover:not(.active) {
+    color: $col-default!important; // Using important is important.;
+}
+.cs-btn.info:focus:hover:not(.active) {
+    color: $col-info!important; // Using important is important.;
+}
+.cs-btn.warning:focus:hover:not(.active) {
+    color: $col-warning!important; // Using important is important.;
+}
+.cs-btn.white:focus:hover:not(.active) {
+    color: $col-white!important; // Using important is important.;
+}
+.cs-btn:focus:hover:not(.active)::before {
+    top: 100%;
+}
+// Endfix
+
+.cs-btn-sm {
+    padding: 9px 23px;
+}
+
+.cs-btn-xs {
+    padding: 2px 16px;
+}
+
+a.cs-btn {
+    text-decoration: none;
+}
