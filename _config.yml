@@ -15,7 +15,7 @@ collections:
     title: Parts
     output: true
 volledige-titel: JSON Gui
-url: https://json-gui.site/
+url: https://json-gui.site
 enforce_ssl: json-gui.site
 tags: JSON GUI interface
 google_analytics: UA-112439526-2
