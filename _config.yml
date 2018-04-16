@@ -22,8 +22,6 @@ google_analytics: UA-112439526-2
 # phone: 06-12345678
 # email: effie@testmail.com
 description: A JSON GUI
-baseurl: 
-url: 
 github_username: bunkersem
 youtube_username: 9Wereld
 markdown: kramdown
