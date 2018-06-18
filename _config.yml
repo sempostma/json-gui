@@ -14,10 +14,12 @@ collections:
   parts_min:
     title: Parts
     output: true
+sass:
+  compressed: true
 volledige-titel: JSON Gui
 url: https://json-gui.site
 enforce_ssl: json-gui.site
-tags: JSON GUI interface
+keywords: JSON, GUI, interface
 google_analytics: UA-112439526-2
 description: A Gui for visually editing JSON files. Supported file types for importing and exporting are CSV, YAML, XML etc. You are also able to generate JSON patches (RFC6902).
 github_username: bunkersem

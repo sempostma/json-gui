@@ -8,42 +8,53 @@
   <meta name="designer" content="{{ site.designer.name }}, {{ site.designer.email }}">
   <link rel="author" href="{{ '/humans.txt' | absolute_url }}">
   <meta name="description" content="{{ site.description }}">
-  <meta name="keywords" content="{{ site.tags }}">
+  <meta name="keywords" content="{{ site.keywords }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:description" content="{{ site.description }}"/>
+  <link rel="canonical" href="{{ "/" | absolute_url }}" />
+  <meta property="og:url" content="{{ "/" | absolute_url }}"/>
+  <meta property="og:site_name" content="JSON-GUI" />
+  <script type="application/ld+json">
+  {"name":"{{ site.title }}","description":"{{ site.description }}","author":{"@type":"Person","name":"Sem Postma"},"@type":"WebSite","url":"{{ "/" | absolute_url }}","headline":"Home","@context":"http://schema.org"}
+  </script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css" rel="stylesheet" integrity="sha384-awusxf8AUojygHf2+joICySzB780jVvQaVCAt1clU3QsyAitLGul28Qxb2r1e5g+" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css" rel="stylesheet" integrity="sha384-awusxf8AUojygHf2+joICySzB780jVvQaVCAt1clU3QsyAitLGul28Qxb2r1e5g+"
+    crossorigin="anonymous">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css" integrity="sha256-G2+IcX6XRBcYufvUNrCqZdR1PDbJkBU164G3zkt2C8Q="
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.36.0/codemirror.min.css" integrity="sha256-I8NyGs4wjbMuBSUE40o55W6k6P7tu/7G28/JGUUYCIs="
     crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.36.0/codemirror.min.css" integrity="sha256-I8NyGs4wjbMuBSUE40o55W6k6P7tu/7G28/JGUUYCIs=" crossorigin="anonymous" />
-    
-  <link rel="apple-touch-icon" sizes="57x57" href="{{ "/assets/img/meta-icons/apple-icon-57x57.png" | absolute_url }}">
-  <link rel="apple-touch-icon" sizes="60x60" href="{{ "/assets/img/meta-icons/apple-icon-60x60.png" | absolute_url }}">
-  <link rel="apple-touch-icon" sizes="72x72" href="{{ "/assets/img/meta-icons/apple-icon-72x72.png" | absolute_url }}">
-  <link rel="apple-touch-icon" sizes="76x76" href="{{ "/assets/img/meta-icons/apple-icon-76x76.png" | absolute_url }}">
-  <link rel="apple-touch-icon" sizes="114x114" href="{{ " /assets/img/meta-icons/apple-icon-114x114.png" | absolute_url }}">
-  <link rel="apple-touch-icon" sizes="120x120" href="{{ "/assets/img/meta-icons/apple-icon-120x120.png" | absolute_url }}">
-  <link rel="apple-touch-icon" sizes="144x144" href="{{ "/assets/img/meta-icons/apple-icon-144x144.png" | absolute_url }}">
-  <link rel="apple-touch-icon" sizes="152x152" href="{{ "/assets/img/meta-icons/apple-icon-152x152.png" | absolute_url }}">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/img/meta-icons/apple-icon-180x180.png" | absolute_url }}">
-  <link rel="icon" type="image/png" sizes="192x192" href="{{ "/assets/img/meta-icons/android-icon-192x192.png" | absolute_url }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/img/meta-icons/favicon-32x32.png" | absolute_url }}">
-  <link rel="icon" type="image/png" sizes="96x96" href="{{ "/assets/img/meta-icons/favicon-96x96.png" | absolute_url }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/img/meta-icons/favicon-16x16.png" | absolute_url }}">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ " /assets/img/meta-icons/apple-icon-57x57.png " | absolute_url }}">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ " /assets/img/meta-icons/apple-icon-60x60.png " | absolute_url }}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ " /assets/img/meta-icons/apple-icon-72x72.png " | absolute_url }}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ " /assets/img/meta-icons/apple-icon-76x76.png " | absolute_url }}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ " /assets/img/meta-icons/apple-icon-114x114.png
+    " | absolute_url }}">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ " /assets/img/meta-icons/apple-icon-120x120.png
+    " | absolute_url }}">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ " /assets/img/meta-icons/apple-icon-144x144.png
+    " | absolute_url }}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ " /assets/img/meta-icons/apple-icon-152x152.png
+    " | absolute_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ " /assets/img/meta-icons/apple-icon-180x180.png
+    " | absolute_url }}">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ " /assets/img/meta-icons/android-icon-192x192.png
+    " | absolute_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ " /assets/img/meta-icons/favicon-32x32.png " | absolute_url }}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ " /assets/img/meta-icons/favicon-96x96.png " | absolute_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ " /assets/img/meta-icons/favicon-16x16.png " | absolute_url }}">
   <link rel="manifest" href="{{ " /manifest.json " | absolute_url }}">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="{{ "/assets/img/meta-icons/ms-icon-144x144.png " | absolute_url }}">
+  <meta name="msapplication-TileImage" content="{{ " /assets/img/meta-icons/ms-icon-144x144.png " | absolute_url }}">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="{{ "/assets/css/lib/prism.css" | absolute_url }}">
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | absolute_url }}"> 
-  {% comment %} {% feed_meta %} {% endcomment %} 
-  {% if jekyll.environment == 'production' and site.google_analytics %} 
-    {% include google-analytics.html %} 
-  {% endif %}
-    
-   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  <link rel="stylesheet" href="{{ " /assets/css/lib/prism.css " | absolute_url }}">
+  <link rel="stylesheet" href="{{ " /assets/css/main.css " | absolute_url }}"> {% comment %} {% feed_meta %} {% endcomment %} {% if jekyll.environment == 'production' and site.google_analytics %} {%
+  include google-analytics.html %} {% endif %}
+
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 </head>

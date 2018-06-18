@@ -254,8 +254,7 @@
     </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js" integrity="sha256-THlgZSjqt7idNSdnUvGypTuXB5C4hV9kSuPYrbiq19o="
-    crossorigin="anonymous"></script>
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
@@ -278,12 +277,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js" integrity="sha256-meF2HJJ2Tcruwz3z4XcxYDRMxKprjdruBHc3InmixCQ=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/yamljs/0.3.0/yaml.min.js" integrity="sha256-fDg/uZo3GBErK1nydRVMJ6iZcDtOq2u3tWJtql0odec=" crossorigin="anonymous"></script>
 
-<script src="{{ "/assets/js/lib/prism.js" | absolute_url  }}"></script>
-<script src="{{ "/assets/js/lib/schema.js" | absolute_url  }}"></script>
-<script src="{{ "/assets/js/lib/smoothscroll.js" | absolute_url  }}"></script>
-<script src="{{ "/assets/js/obj2xml.js" | absolute_url  }}"></script>
-<script src="{{ "/assets/js/obj2csv.js" | absolute_url  }}"></script>
-<script src="{{ "/assets/js/util.js" | absolute_url  }}"></script>
-<script src="{{ "/assets/js/modals.js" | absolute_url  }}"></script>
-<script src="{{ "/assets/js/json-tree.js" | absolute_url  }}"></script>
-<script src="{{ "/assets/js/main.js" | absolute_url  }}"></script>
+<script>
+{% include assets/js/lib/prism.js %}
+{% include assets/js/lib/schema.js %}
+{% include assets/js/lib/smoothscroll.js %}
+{% include assets/js/obj2xml.js %}
+{% include assets/js/obj2csv.js %}
+{% include assets/js/util.js %}
+{% include assets/js/modals.js %}
+{% include assets/js/json-tree.js %}
+{% include assets/js/main.js %}
+</script>
