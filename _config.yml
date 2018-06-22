@@ -28,6 +28,7 @@ markdown: kramdown
 theme: minima
 plugins: 
   - jekyll-seo-tag
+  - jekyll-sitemap
 author:
   name: Sem Postma
   from: Oosterhout, Noord Brabant, The Netherlands
