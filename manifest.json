@@ -1,5 +1,6 @@
 {
     "name": "JSON-GUI",
+    "short_name": "JSON-GUI",
     "icons": [
         {
             "src": "/assets/img/meta-icons/android-icon-36x36.png",
