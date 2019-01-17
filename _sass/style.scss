@@ -201,7 +201,8 @@ body:not(.dragging) #tree .node.leaf:hover {
 .change-type::before {
     right: -10px;
     content: '\f024';
-    font-family: Fontawesome;
+    font-family: 'Fontawesome';
+    margin-right: 5px;
 }
 
 body.dragging, body.dragging {
@@ -218,6 +219,7 @@ body.dragging, body.dragging {
     display: none;
     user-select: none;
     cursor: pointer;
+    margin-right: 2px;
 }
 
 .move  {
@@ -225,11 +227,13 @@ body.dragging, body.dragging {
     display: none;
     user-select: none;
     cursor: move;
+    margin-right: 2px;
 }
 .delete {
     display: none;
     user-select: none;
     cursor: pointer;
+    margin-right: 2px;
 }
 
 body:not(.dragging) .node > .head:hover > .create {

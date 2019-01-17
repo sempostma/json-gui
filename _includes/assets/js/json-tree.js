@@ -115,7 +115,7 @@ function getTreeNode(tree, path) {
         }.bind(this));
 
         $(sel).on('focus', '.change-type select', function (e) {
-            $(e.target).attr('oldval', $(e.target).val());
+            $(e.target).attr('oldval', JSON.stringify($(e.target).val()));
             var val = $(e.target).closest('.node').find('.node-val').val();
             var options = $(e.target).find('option');
             options.eq(1).attr('disabled', isNaN(parseFloat(val)));
