@@ -26,11 +26,28 @@ description: A JSON Viewer and editor for visually editing JSON files. Supported
 github_username: bunkersem
 youtube_username: 9Wereld
 twitter_username: esstudio_site
+social:
+  name: Ben Balter
+  links:
+    - https://twitter.com/esstudio_site
+    - https://github.com/LesterGallagher
 rss: Blog
 rss_url: https://esstudio.site/feed.xml
 rss_html_url: https://esstudio.site/blog
 markdown: kramdown
 theme: minima
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/logo.png
+      width: 192
+      height: 192
+      lang: en
+      title: JSON GUI
+twitter:
+  username: esstudio_site
+  card: summary
 plugins: 
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -38,10 +55,12 @@ author:
   name: Sem Postma
   from: Oosterhout, Noord Brabant, The Netherlands
   role: Developer
-  email: sem.postma@gmail.com
+  email: info@esstudio.site
+  twitter: esstudio_site
 designer:
   name: Sem Postma
   from: Oosterhout, Noord Brabant, The Netherlands
   role: Designer
-  email: sem.postma@gmail.com
+  email: info@esstudio.site
+  twitter: esstudio_site
 google_analytics: UA-90014538-3

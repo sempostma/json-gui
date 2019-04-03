@@ -41,31 +41,42 @@ root:
     subfolderitems:
       - page: Undo
         id: edit-undo
+        fa: undo
       - page: Redo
         id: edit-redo
+        fa: repeat
   - page: JSON Patch
     subfolderitems:
       - page: Reset History
         id: nav-reset-history
+        fa: hand-paper-o
       - page: Generate Patch
         id: nav-generate-patch
+        fa: forward
       - seperator
       - page: RFC6902 (external)
         external: true
         url: https://tools.ietf.org/html/rfc6902
+        fa: external-link-square
   - page: Schema
     id: nav-generate-schema
     subfolderitems:
       - page: JSON Schema
         id: nav-generate-schema-json
+        fa: code
       - page: Generic Schema
         id: nav-generate-schema-generic
+        fa: file-text-o
       - page: MySql Table Schema
         id: nav-generate-schema-mysql
+        fa: database
       - page: Mongoose Schema
         id: nav-generate-schema-mongoose
+        fa: file-code-o
       - page: Google BigQuery
         id: nav-generate-schema-bigquery
+        fa: google
       - page: ClickHouse Table Schema
         id: nav-generate-schema-clickhouse
+        fa: table
   

@@ -40,6 +40,14 @@ $.fn.scrollGuard2 = function () {
         });
 };
 
+$(document).ready(function () {
+    $('.dropdown-submenu > a, .dropdown-submenu-right > a').on('click', function (e) {
+        $(this).next('ul').toggle();
+        e.stopPropagation();
+        e.preventDefault();
+    });
+});
+
 // my lightbox
 
 var $modal = $('#image-modal');
@@ -112,7 +120,7 @@ $close.on('click', function () {
         logDelta(reverseDelta);
     });
 
-    $('#edit-redo').on('click', function(e) {
+    $('#edit-redo').on('click', function (e) {
         if (undoHistory.length === 0) return;
         var reverseDelta = jsondiffpatch.reverse(undoHistory.pop());
         patchesHistory.push(reverseDelta);
