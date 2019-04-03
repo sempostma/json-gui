@@ -171,11 +171,15 @@ function getTreeNode(tree, path) {
                         this.setNode(path, delta[1]); // modified value
                     } else if (delta.length == 1) {
                         this.setNode(path, delta[0]); // add value
+                    } else {
+                        console.error('unrecognized delta', delta);
                     }
                 } else {
                     for (var key in delta) {
+                        var childDelta = delta[key];
                         if (delta.hasOwnProperty(key) && (key !== '_t' || delta['_t'] !== 'a')) {
-                            deltasQueue.push({ delta: delta[key], path: path.concat(key) });
+                            if (delta._t === 'a') key = key.replace(/^_/, '');
+                            deltasQueue.push({ delta: childDelta, path: path.concat(key) });
                         }
                     }
                 }
@@ -199,6 +203,7 @@ function getTreeNode(tree, path) {
         this.setNode = function (path, obj, rm) {
             if (typeof (obj) === 'undefined') obj = null;
             if (rm) {
+                console.log('remvoing', path, $(this.getHtmlKeyNode(path)).get(0));
                 $(this.getHtmlKeyNode(path)).remove();
                 // this.setHtmlKeyNode(path, null, true);
             }
@@ -221,19 +226,19 @@ function getTreeNode(tree, path) {
                 if (curr.getAttribute('type') === 'array') {
                     curr = curr.children[curr.children.length - 1].children[parseInt(path[i])];
                 } else {
-                    for(var ii = 0; ii < curr.children[curr.children.length - 1]/*ul(children)*/.children.length; ii++) {
-                        console.log(curr.children[curr.children.length - 1]/*ul(children)*/.children[ii] 
-                        .children[0].getElementsByClassName('tree-node-title')[0]/* fast way to get to the title*/.innerText, path[i]);
-                        if (curr.children[curr.children.length - 1]/*ul(children)*/.children[ii] 
+                    for (var ii = 0; ii < curr.children[curr.children.length - 1]/*ul(children)*/.children.length; ii++) {
+                        console.log(curr.children[curr.children.length - 1]/*ul(children)*/.children[ii]
+                            .children[0].getElementsByClassName('tree-node-title')[0]/* fast way to get to the title*/.innerText, path[i]);
+                        if (curr.children[curr.children.length - 1]/*ul(children)*/.children[ii]
                             .children[0].getElementsByClassName('tree-node-title')[0]/* fast way to get to the title*/.innerText === path[i]) {
-                            curr = curr.children[curr.children.length - 1]/*ul(children)*/.children[ii] ;
+                            curr = curr.children[curr.children.length - 1]/*ul(children)*/.children[ii];
                             break;
                         }
                     }
                     if (ii === curr.children[curr.children.length - 1]/*ul(children)*/.children.length) return null;
                 }
             }
-            
+
             return curr;
         };
         // this.setHtmlKeyNode = function (path, node, rm) {
@@ -272,9 +277,9 @@ function getTreeNode(tree, path) {
                 head.className = 'head tree-node-head';
                 node.appendChild(head);
                 var title = document.createElement('span');
-                title.className = 'title tree-node-title' 
-                    + (typeof(obj) === 'object' ? ' node-title-branch' 
-                        + (Array.isArray(obj) ? ' node-title-array': '') : '' );
+                title.className = 'title tree-node-title'
+                    + (typeof (obj) === 'object' ? ' node-title-branch'
+                        + (Array.isArray(obj) ? ' node-title-array' : '') : '');
                 title.innerText = name;
                 head.appendChild(title);
                 move = document.createElement('span');

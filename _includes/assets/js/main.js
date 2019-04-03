@@ -619,19 +619,19 @@ If you choose to cancel, the patch recording will be stopped and the editor will
             if (Array.isArray(delta)) {
                 if (delta[2] === 0 && isArr) {
                     msg = '<span class="d">deleted</span> item <span class="po">' + nv(delta[0])
-                        + '</span> from <span class="pn">' + delta[path.length - 2] + '</span>';
+                        + '</span> from <span class="pn">' + (path.length >= 2 ? delta[path.length - 2] : 'root') + '</span>';
                 } else if (delta[2] === 0) {
                     msg = '<span class="d">deleted</span> <span class="po">' + path[path.length - 1]
-                        + '</span> from <span class="pn">' + delta[path.length - 2] + '</span>';
+                        + '</span> from <span class="pn">' + (path.length >= 2 ? delta[path.length - 2] : 'root') + '</span>';
                 } else if (delta[2] === 3) {
                     msg = '<span var="d">moved</span> item <span class="vn">' + nv(delta[0])
-                        + '</span> from <span class="po">' + delta[path.length - 1]
+                        + '</span> from <span class="po">' + (path.length >= 1 ? delta[path.length - 1] : 'root')
                         + '</span> to <span class="pn">' + delta[1] + '</span>';
                 } else if (delta.length == 2) {
-                    msg = '<span var="u">modified</span> <span class="po">' + path[path.length - 1] + '</span> from <span class="vo">'
+                    msg = '<span var="u">modified</span> <span class="po">' + (path.length >= 1 ? path[path.length - 1] : 'root') + '</span> from <span class="vo">'
                         + nv(delta[0]) + '</span> to <span class="vn">' + nv(delta[1]) + '</span>';
                 } else if (delta.length == 1) {
-                    msg = '<span var="c">created</span> <span class="po">' + path[path.length - 1]
+                    msg = '<span var="c">created</span> <span class="po">' + (path.length >= 1 ? path[path.length - 1] : 'root')
                         + '</span> with value <span class="vn">' + nv(delta[0]) + '</span>';
                 }
                 displayMessage(typeof (delta[0]), msg, 'info');
