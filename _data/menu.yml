@@ -1,4 +1,48 @@
 root:
+  - page: File
+    id: nav-file
+    subfolderitems:
+      - page: New
+        id: nav-file-new
+        fa: file-text
+      - page: Open from disk
+        id: nav-file-open-disk
+        fa: folder-open-o
+      - page: Open online
+        id: nav-file-open-online
+        fa: external-link
+      - page: Import from XML
+        id: nav-file-import-xml
+        fa: file-code-o
+      - page: Import from YAML
+        id: nav-file-import-yaml
+        fa: file-code-o
+      - page: Import from CSV
+        id: nav-file-import-csv
+        fa: file-code-o
+      - seperator
+      - page: Save on disk
+        id: nav-file-save-disk
+        fa: download
+      - page: Save online
+        id: nav-file-save-online
+        fa: cloud-download
+      - seperator
+      - page: Convert to XML
+        id: nav-file-convert-xml
+        fa: code
+      - page: Convert to YAML
+        id: nav-file-convert-yaml
+        fa: code
+      - page: Convert to CSV
+        id: nav-file-convert-csv
+        fa: code
+  - page: Edit
+    subfolderitems:
+      - page: Undo
+        id: edit-undo
+      - page: Redo
+        id: edit-redo
   - page: JSON Patch
     subfolderitems:
       - page: Reset History
@@ -24,33 +68,4 @@ root:
         id: nav-generate-schema-bigquery
       - page: ClickHouse Table Schema
         id: nav-generate-schema-clickhouse
-  - page: File
-    id: nav-file
-    subfolderitems:
-      - page: New
-        id: nav-file-new
-      - page: Open from disk
-        id: nav-file-open-disk
-      - page: Open online
-        id: nav-file-open-online
-      - page: Import from XML
-        id: nav-file-import-xml
-      - page: Import from YAML
-        id: nav-file-import-yaml
-      - page: Import from CSV
-        id: nav-file-import-csv
-      - seperator
-      - page: Save on disk
-        id: nav-file-save-disk
-      - page: Save online
-        id: nav-file-save-online
-      - seperator
-      - page: Convert to XML
-        id: nav-file-convert-xml
-      - page: Convert to YAML
-        id: nav-file-convert-yaml
-      - page: Convert to CSV
-        id: nav-file-convert-csv
-  - page: Contact (external)
-    external: true
-    url: https://bunkersem.github.io/portfolio/contact
+  

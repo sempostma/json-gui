@@ -43,7 +43,9 @@ layout: home
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
         <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+        if (location.protocol === 'https:' || location.protocol === 'http:') {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        } 
         </script>
     </div>
 </div>
@@ -69,3 +71,4 @@ layout: home
 <div id="msg-delta">
     
 </div>
+

@@ -1,3 +1,7 @@
+@import "lib/bootstrap.min";
+@import "lib/font-awesome.min";
+@import "lib/codemirror.min";
+@import "roboto";
 @import "bootstrap-extensions";
 @import "mixins";
 @import "svgencodings";
@@ -5,36 +9,47 @@
 @import "buttons";
 @import "form";
 
+html {
+    overflow-x: hidden;
+}
+
 *:focus {
     outline: none;
 }
 
-.compare-left, .compare-right {
+.compare-left,
+.compare-right {
     min-width: 16px;
     min-height: 16px;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     -webkit-appearance: none;
     appearance: none;
-    width: 11px;
-    height: 11px; // horizontal scrollbar
+    width: 8px;
+    height: 8px; // horizontal scrollbar
 }
 
 ::-webkit-scrollbar-thumb {
     border-radius: 6px;
-    background-color: rgba(0,0,0,.5); 
-    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
-    box-shadow: 0 0 1px rgba(255,255,255,.5);
+    background-color: rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+    box-shadow: 0 0 1px rgba(255, 255, 255, .5);
 }
 
 .home {
-    clear:both;
+    clear: both;
 }
 
 footer {
     color: #fff;
-    a, h2 {
+
+    a,
+    h3,
+    h1,
+    h2,
+    h5,
+    h4 {
         color: #fff;
     }
 }
@@ -43,7 +58,12 @@ legend {
     border-bottom: none;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
 }
 
@@ -96,11 +116,11 @@ footer {
     z-index: 1000;
     position: relative;
     padding: 100px 0;
-    font-size: 15px; 
+    font-size: 15px;
 }
 
 footer .social-media-list {
-    font-size: 15px; 
+    font-size: 15px;
     fill: #fff;
     list-style: none;
     padding-left: 0;
@@ -117,8 +137,8 @@ footer .social-media-list {
 #tree textarea {
     box-sizing: content-box;
     resize: none;
-    border: 1px solid rgba(0,0,0,0.1);
-    overflow:hidden;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     padding: 0;
     -webkit-appearance: none;
     appearance: none;
@@ -161,19 +181,24 @@ body:not(.dragging) #tree .node.leaf:hover {
     margin-right: 5px;
 }
 
-.node.branch.clpsd > .head > .caret {
+.node.branch.clpsd>.head>.caret {
     transform: rotate(-90deg);
 }
 
-.node.branch.clpsd > ul {
+.node.branch.clpsd>ul {
     display: none;
 }
 
-.tree-node-title, .change-type, .node-val {
+.tree-node-title,
+.change-type,
+.node-val {
     vertical-align: middle;
 }
 
-.node-children/*ul*/ {
+.node-children
+
+/*ul*/
+    {
     list-style: none;
 }
 
@@ -184,7 +209,7 @@ body:not(.dragging) #tree .node.leaf:hover {
 
 .change-type-select {
     resize: none;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
     -webkit-appearance: none;
     appearance: none;
@@ -205,10 +230,11 @@ body:not(.dragging) #tree .node.leaf:hover {
     margin-right: 5px;
 }
 
-body.dragging, body.dragging {
+body.dragging,
+body.dragging {
     cursor: move !important;
 }
-  
+
 .dragged {
     position: absolute;
     opacity: 0.5;
@@ -222,13 +248,14 @@ body.dragging, body.dragging {
     margin-right: 2px;
 }
 
-.move  {
+.move {
     margin-left: 10px;
     display: none;
     user-select: none;
     cursor: move;
     margin-right: 2px;
 }
+
 .delete {
     display: none;
     user-select: none;
@@ -236,15 +263,18 @@ body.dragging, body.dragging {
     margin-right: 2px;
 }
 
-body:not(.dragging) .node > .head:hover > .create {
+body:not(.dragging) .node>.head:hover>.create {
     display: inline;
 }
-body:not(.dragging) .node > .head:hover > .move {
+
+body:not(.dragging) .node>.head:hover>.move {
     display: inline;
 }
-body:not(.dragging) .node > .head:hover > .delete {
+
+body:not(.dragging) .node>.head:hover>.delete {
     display: inline;
 }
+
 .tree-node-head {
     padding-right: 50px;
     display: block;
@@ -266,37 +296,42 @@ body:not(.dragging) .node > .head:hover > .delete {
     top: -4px;
     border: 5px solid transparent;
     border-left-color: red;
-    border-right: none; 
+    border-right: none;
 }
 
-.node[type=array] > ul > li > .head > .title {
+.node[type=array]>ul>li>.head>.title {
     display: none;
 }
 
 // counters
-@function repeat($character, $n){
-    $c:"";
-    @if $n == 0 {
+@function repeat($character, $n) {
+    $c: "";
+
+    @if $n==0 {
         @return "";
     }
+
     @for $i from 0 through $n {
         $c: $c + $character;
     }
+
     @return $c;
 }
 
 $r: ' > ul > li';
+
 @for $i from 0 to 10 {
-    #tree > .node.root#{repeat($r, $i)}[type=array] {
+    #tree>.node.root#{repeat($r, $i)}[type=array] {
         counter-reset: section#{$i};
     }
-    #tree > .node.root#{repeat($r, $i)}[type=array] > ul > li::before {
+
+    #tree>.node.root#{repeat($r, $i)}[type=array]>ul>li::before {
         content: counter(section#{$i}) " ";
         counter-increment: section#{$i};
     }
 }
 
-.node[type=array] > ul > li::before {
+.node[type=array]>ul>li::before {
     display: block;
     float: left;
     margin-right: 5px;
@@ -360,6 +395,7 @@ $r: ' > ul > li';
     .modal-tabs {
         border-color: #ddd;
     }
+
     .tab-content {
         padding: 10px;
     }
@@ -371,8 +407,8 @@ $r: ' > ul > li';
 
 .panel-heading .button-type {
     position: absolute;
-    top: 0; top: 50%;
+    top: 0;
+    top: 50%;
     right: 0;
     transform: translateY(-50%);
 }
-

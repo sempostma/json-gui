@@ -215,7 +215,7 @@
         <div class="row">
             <div class="col-sm-4 col-xs-12">
                 <p>
-                    <h2>Project :</h2>
+                    <h3>Project</h3>
                 </p>
                 <p>Animated <a target="_blank" href="https://cssicon.space/#/">Css Icons</a> by <a target="_blank" href="https://twitter.com/DesignJokes">Wenting Zhang</a></p>
                 <p><a target="_blank" href="https://ksp-part-catalog.space">KSP Part catalog</a></p>
@@ -232,7 +232,7 @@
             </div>
             <div class="col-sm-4 col-xs-12">
                 <p>
-                    <h2>Other :</h2>
+                    <h3>Other</h3>
                 </p>
                 <p><a target="_blank" href="https://github.com/bunkersem/">Github</a></p>
                 <p><a target="_blank" href="https://www.youtube.com/user/9Wereld/videos">Youtube</a></p>
@@ -251,46 +251,19 @@
             </div>
             <div class="col-sm-4 col-xs-12">
                 <p>
-                    <h2>Social :
-                        <h2>
+                    <h3>Social<h3>
                 </p>
                 <div>{% include social.html %}</div>
+                <p>
+                    <h4>Sharing</h4>
+                </p>
+                <div id="sharing">
+                    {% include share.html %}
+                </div>
             </div>
         </div>
     </div>
 </footer>
 
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.36.0/codemirror.min.js" integrity="sha256-zxnvghlATD/LUl0T6rkoZF8cKHSCHSPA4ocDtqIcFq0="
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.36.0/mode/javascript/javascript.min.js" integrity="sha256-2RHOAB6h3ogJE2qJ7jn8U0sr+nsFfF5gqaUMJdekmQs="
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jsondiffpatch/0.2.5/jsondiffpatch.min.js" integrity="sha256-jLs0YC2LKfFopJCPLdsg5Y4PJtRDRd1TnZ6TVhFDnAk="
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jsondiffpatch/0.2.5/jsondiffpatch-formatters.min.js" integrity="sha256-B3oOKz0KQtEMVV1v8w1sOngNslMM6S7NdQvWzo+kHwo="
-    crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" integrity="sha256-AAhU14J4Gv8bFupUUcHaPQfvrdNauRHMt+S4UVcaJb0="
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sortable/0.9.13/jquery-sortable-min.js" integrity="sha256-wWIfHlrIpCbyDbt+VSBUsc54ApQZWKqBmF38yUKLGeY="
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.7/download.min.js" integrity="sha256-jO7zIwKMJTUQkptQfQMhu+uL4erqSzAd0wUfueDCuNI=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js" integrity="sha256-meF2HJJ2Tcruwz3z4XcxYDRMxKprjdruBHc3InmixCQ=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/yamljs/0.3.0/yaml.min.js" integrity="sha256-fDg/uZo3GBErK1nydRVMJ6iZcDtOq2u3tWJtql0odec=" crossorigin="anonymous"></script>
-
-<script>
-{% include assets/js/lib/prism.js %}
-{% include assets/js/lib/schema.js %}
-{% include assets/js/lib/smoothscroll.js %}
-{% include assets/js/obj2xml.js %}
-{% include assets/js/obj2csv.js %}
-{% include assets/js/util.js %}
-{% include assets/js/modals.js %}
-{% include assets/js/json-tree.js %}
-{% include assets/js/main.js %}
-</script>
+<script src="assets/js/bundle.js"></script>

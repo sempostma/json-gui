@@ -1,4 +1,5 @@
 ---
+encoding: utf-8
 title: JSON-GUI
 timezone: Europe/Amsterdam
 collections:
@@ -25,6 +26,9 @@ description: A JSON Viewer and editor for visually editing JSON files. Supported
 github_username: bunkersem
 youtube_username: 9Wereld
 twitter_username: esstudio_site
+rss: Blog
+rss_url: https://esstudio.site/feed.xml
+rss_html_url: https://esstudio.site/blog
 markdown: kramdown
 theme: minima
 plugins: 
