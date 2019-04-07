@@ -14,6 +14,7 @@
 {% include assets/js/lib/yaml.min.js %}
 {% include assets/js/lib/schema.js %}
 {% include assets/js/lib/smoothscroll.js %}
+{% include assets/js/lib/prism.js %}
 
 {% include assets/js/obj2xml.js %}
 {% include assets/js/obj2csv.js %}
