@@ -68,16 +68,22 @@ function getTreeNode(tree, path) {
         }.bind(this));
 
         // TODO: check all methods: { if property with same key already exists: display error }
-        $(sel).on('click', '.create', function (e) {
-            var parentPath = findPath(e.target).slice(0);
+        $(sel).add('#root-node-create').on('click', '.create', function (e) {
+            var parentPath = $(this).attr('data-root') ? [] : findPath(e.target).slice(0);
             window.spawnNewElemModal(function (payload) {
                 // { name: string, val: any, type: string }
                 var parentObj = getTreeNode(window.getPersistentValue(), this);
                 var newPath = Array.isArray(parentObj) ? this.concat(parentObj.length) : this.concat(payload.name);
                 // var obj = getTreeNode(parent, [path[path.length - 1]]);// do check if key exists here
+                console.log(payload)
+                if (Array.isArray(parentObj) === false && parentObj[payload.name] !== undefined) {
+                    alert('An item with the same name already exists.');
+                    return false;
+                }
                 var insertDelta = createDeltaFromPath(newPath, [payload.val], Array.isArray(parentObj));
                 _this.fireCb('change', [insertDelta]);
                 _this.applyDelta(insertDelta, []);
+                return true;
             }.bind(parentPath));
         });
 

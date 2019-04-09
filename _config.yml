@@ -23,11 +23,11 @@ enforce_ssl: json-gui.site
 keywords: JSON, GUI, interface
 google_analytics: UA-112439526-2
 description: A JSON Viewer and editor for visually editing JSON files. Supported file types for importing and exporting are CSV, YAML, XML etc. You are also able to generate JSON patches (RFC6902).
-github_username: bunkersem
+github_username: LesterGallagher
 youtube_username: 9Wereld
 twitter_username: esstudio_site
 social:
-  name: Ben Balter
+  name: Esstudio
   links:
     - https://twitter.com/esstudio_site
     - https://github.com/LesterGallagher

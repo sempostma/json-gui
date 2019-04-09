@@ -170,6 +170,10 @@ footer .social-media-list {
     display: none;
 }
 
+#root-ul {
+    padding-left: 7px;
+}
+
 body:not(.dragging) #tree .node.leaf:hover {
     background: #ddd;
 }
@@ -242,7 +246,7 @@ body.dragging {
 }
 
 .create {
-    display: none;
+    // display: none;
     user-select: none;
     cursor: pointer;
     margin-right: 2px;
@@ -348,13 +352,14 @@ $r: ' > ul > li';
     svg {
         width: 10px;
         margin-right: 7px;
-        
+
         path {
             fill: currentColor;
         }
     }
 
-    .dropdown-submenu, .dropdown-submenu-right {
+    .dropdown-submenu,
+    .dropdown-submenu-right {
         position: relative;
     }
 
@@ -449,4 +454,31 @@ $r: ' > ul > li';
     top: 50%;
     right: 0;
     transform: translateY(-50%);
+}
+
+#tree {
+    counter-reset: nums;
+    position: relative;
+    padding-left: 20px;
+}
+
+#tree::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    background: #ccc;
+}
+
+.tree-node-head::before {
+    counter-increment: nums;
+    content: ""counter(nums)"";
+    left: 0px;
+    width: 20px;
+    text-align: center;
+    position: absolute;
+    display: block;
 }

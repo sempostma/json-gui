@@ -16,8 +16,10 @@
             else if (payload.type === 'object') payload.val = {};
             else if (payload.type === 'array') payload.val = [];
             else payload.val = window.convert(payload.val, payload.type);
-            cb(payload);
-            $('#new-item-modal').modal('hide');
+            const succesfull = cb(payload);
+            if (succesfull) {
+                $('#new-item-modal').modal('hide');
+            }
             return false;
         });
     };
