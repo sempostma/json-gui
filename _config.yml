@@ -18,8 +18,8 @@ collections:
 sass:
   compressed: true
 volledige-titel: JSON Gui
-url: https://json-gui.site
-enforce_ssl: json-gui.site
+url: https://json-gui.esstudio.site
+enforce_ssl: json-gui.esstudio.site
 keywords: JSON, GUI, interface
 google_analytics: UA-112439526-2
 description: A JSON Viewer and editor for visually editing JSON files. Supported file types for importing and exporting are CSV, YAML, XML etc. You are also able to generate JSON patches (RFC6902).
