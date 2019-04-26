@@ -76,7 +76,7 @@ $close.on('click', function () {
 
     var jsonTree = new window.JsonTree('#tree');
 
-    var persistentVal = {
+    var persistentValStr = localStorage.getItem('persistentVal') || JSON.stringify({
         'ID': 'SGML',
         'SortAs': 'SGML',
         'GlossTerm':
@@ -88,8 +88,8 @@ $close.on('click', function () {
             'GlossSeeAlso': ['GML', 'XML']
         },
         'GlossSee': 'markup'
-    };
-    var persistentValStr = JSON.stringify(persistentVal, null, indentUnit);
+    });
+    var persistentVal = JSON.parse(persistentValStr);
     var initialVal = window.jsondiffpatch.clone(persistentVal);
     var myCodeMirror = window.CodeMirror(document.getElementById('json'), {
         value: persistentValStr,
@@ -117,7 +117,7 @@ $close.on('click', function () {
         persistentValStr = JSON.stringify(persistentVal, null, indentUnit);
         myCodeMirror.setValue(persistentValStr);
         jsonTree.applyDelta(reverseDelta, []);
-        logDelta(reverseDelta);
+        recordDelta(reverseDelta);
     });
 
     $('#edit-redo').on('click', function (e) {
@@ -129,14 +129,14 @@ $close.on('click', function () {
         persistentValStr = JSON.stringify(persistentVal, null, indentUnit);
         myCodeMirror.setValue(persistentValStr);
         jsonTree.applyDelta(reverseDelta, []);
-        logDelta(reverseDelta);
+        recordDelta(reverseDelta);
     });
 
     $('#nav-generate-patch').on('click', function () {
         window.formInputModal('Generate patch', '\
 <label title="This will attempt to combine patch files. Which will reduce the file size. \
 If you uncheck this option you will get a patch file with every change since the last patch reset/start">\
-<input type="checkbox" checked name="merge"> Merge patches</label>', false, function (result) {
+<input type="checkbox" name="merge"> Merge patches</label>', false, function (result) {
                 if (result !== false) {
                     logPatches(result.merge === 'on');
                     $jsonPatchContainer.css('display', 'block');
@@ -586,7 +586,7 @@ If you choose to cancel, the patch recording will be stopped and the editor will
             persistentVal = newval;
             persistentValStr = json;
 
-            logDelta(delta);
+            recordDelta(delta);
         }
     }
 
@@ -607,9 +607,10 @@ If you choose to cancel, the patch recording will be stopped and the editor will
             return val;
     }
 
-    function logDelta(delta) {
+    function recordDelta(delta) {
         var msg;
         var t, path, isArr, deltasQueue = [{ delta: delta, path: [], isArr: false }];
+        localStorage.setItem('persistentVal', persistentValStr);
         while (deltasQueue.length > 0) {
             t = deltasQueue.pop();
             delta = t.delta;
@@ -689,7 +690,7 @@ If you choose to cancel, the patch recording will be stopped and the editor will
                 The browser may become slower<br><small class="text-muted">max 30000 chars</small> / ' + newvalStr.length, 'warning');
 
 
-        logDelta(delta);
+        recordDelta(delta);
     });
 
 

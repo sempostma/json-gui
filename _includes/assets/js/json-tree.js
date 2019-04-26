@@ -207,22 +207,26 @@ function getTreeNode(tree, path) {
         };
 
         this.setNode = function (path, obj, rm) {
-            if (typeof (obj) === 'undefined') obj = null;
-            if (rm) {
-                console.log('remvoing', path, $(this.getHtmlKeyNode(path)).get(0));
-                $(this.getHtmlKeyNode(path)).remove();
-                // this.setHtmlKeyNode(path, null, true);
-            }
-            else {
-                // build tree
-                var node = this.getHtmlKeyNode(path);
-                if (node && $(node).hasClass('root')) $(node).children('ul').empty();
-                var generated = this.generateHtml(path, obj);
-                if (node) {
-                    node.parentElement.replaceChild(generated, node);
-                } else {
-                    $(this.getHtmlKeyNode(path.slice(0, -1))).children('ul, ol').get(0).appendChild(generated);
+            try {
+                if (typeof (obj) === 'undefined') obj = null;
+                if (rm) {
+                    console.log('remvoing', path, $(this.getHtmlKeyNode(path)).get(0));
+                    $(this.getHtmlKeyNode(path)).remove();
+                    // this.setHtmlKeyNode(path, null, true);
                 }
+                else {
+                    // build tree
+                    var node = this.getHtmlKeyNode(path);
+                    if (node && $(node).hasClass('root')) $(node).children('ul').empty();
+                    var generated = this.generateHtml(path, obj);
+                    if (node) {
+                        node.parentElement.replaceChild(generated, node);
+                    } else {
+                        $(this.getHtmlKeyNode(path.slice(0, -1))).children('ul, ol').get(0).appendChild(generated);
+                    }
+                }
+            } catch (err) {
+                console.error(err);
             }
         };
 
