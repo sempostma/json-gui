@@ -56,7 +56,7 @@
     };
 
     window.decodeQuery = function decodeQuery(url, discardEmpty) {
-        url = (url || window.location.href).split('?')[1].split('#')[0];
+        url = ((url || window.location.href).split('?')[1] || '').split('#')[0];
         var ret = {}, qKVP, qParts = url.split('&');
         for (var i = 0; i < qParts.length; i++) {
             qKVP = qParts[i].split('=');

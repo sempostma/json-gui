@@ -300,7 +300,7 @@ function getTreeNode(tree, path) {
                 head.appendChild(del);
                 // this.setHtmlKeyNode(path, node, true);
             }
-            if (typeof (obj) !== 'object') {
+            if (typeof (obj) !== 'object' || obj === null) {
                 node.className = 'node leaf';
                 node.setAttribute('type', typeof (obj));
                 var textarea = document.createElement('textarea');
